@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .js-section{
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        .u-fit, .u-fit-w {
+            width: 100%;
+        }
+
+        .u-absolute{
+            position: absolute;
+        }
+    </style>
+    <body>
+        <div class="js-section">
+            <div class="u-absolute u-fit">
+                <img src="https://picsum.photos/id/1/2880/1800" class="u-fit" />
+            </div>
+        </div>
+        <div class="js-section">
+            <div class="u-absolute u-fit">
+                <img src="https://picsum.photos/id/2/2880/1800" class="u-fit" />
+            </div>
+        </div>
+        <div class="js-section">
+            <div class="u-absolute u-fit">
+                <img src="https://picsum.photos/id/3/2880/1800" class="u-fit" />
+            </div>
+        </div>
+        <div class="js-section">
+            <div class="u-absolute u-fit">
+                <img src="https://picsum.photos/id/4/2880/1800" class="u-fit" />
+            </div>
+        </div>
+    </body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+<script src="simpleParallax.js"></script>
+<script>
+    $(function(){
+        var images = document.querySelectorAll('img');
+        new simpleParallax(images, {
+            scale: 1.2
+        });
+    });
+</script>
